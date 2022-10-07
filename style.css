@@ -33,7 +33,7 @@ body {
 .wrapper {
   width: min(50rem, 100%);
   margin-inline: auto;
-  padding-inline: 2.4rem;
+  padding-inline: 1.6rem;
 }
 
 /*===============NAVBAR===============*/
@@ -57,6 +57,7 @@ nav .wrapper {
 
 nav img {
   width: 65%;
+  padding-top: 1.2rem;
 }
 
 nav button {
