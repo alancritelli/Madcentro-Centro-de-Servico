@@ -42,6 +42,25 @@ img {
 }
 
 /*===============GLOBAL CONFIGS===============*/
+.button {
+  background: var(--secundary-color);
+  color: white;
+
+  border: none;
+  border-radius: 2rem;
+
+  margin-top: 3rem;
+  margin-inline: auto;
+  padding: 2rem;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  transition: background 200ms;
+}
+
 section header h4 {
   font-size: 1.8rem;
   font-weight: 700;
@@ -81,7 +100,7 @@ nav .wrapper {
 }
 
 nav img {
-  width: 60%;
+  width: 55%;
   padding-top: 1.2rem;
 }
 
@@ -164,7 +183,7 @@ body.menu-expanded button {
 
 /*===============HOME===============*/
 section#home .wrapper {
-  padding-top: 5rem;
+  padding-block: 5rem;
 }
 
 #home img {
@@ -173,3 +192,8 @@ section#home .wrapper {
 
   filter: drop-shadow(2rem 2rem 1rem var(--primary-color));
 }
+
+#home header p {
+  margin-bottom: 1.6rem;
+}
+/*===============SERVICES===============*/
