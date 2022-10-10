@@ -192,7 +192,7 @@ body.menu-expanded button {
   margin-top: 1.6rem;
   border-radius: 0rem 10rem 0rem 10rem;
 
-  filter: drop-shadow(2rem 2rem 1rem var(--primary-color));
+  filter: drop-shadow(1rem -1.5rem 1rem var(--primary-color));
 }
 
 #home header p {
@@ -254,4 +254,64 @@ body.menu-expanded button {
 #contactus i {
   font-size: 2rem;
   margin-right: 2rem;
+}
+
+/*===============FOOTER===============*/
+footer {
+  background: var(--primary-color);
+}
+
+footer .wrapper {
+  padding: 4rem 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .social {
+  margin-right: 2rem;
+}
+
+footer i {
+  font-size: 2.5rem;
+  color: black;
+
+  margin-right: 1.5rem;
+}
+
+footer .social a {
+  transition: 0.3s;
+  display: inline-block;
+}
+
+footer .social a:hover {
+  transform: translateY(-8px);
+}
+
+/*===============BACK TO TOP===============*/
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: 200ms;
+}
+
+#backToTopButton i {
+  font-size: 5rem;
+  clip-path: circle();
+  background-color: var(--primary-color);
+  color: white;
+  padding: .5rem;
+
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
