@@ -3,7 +3,36 @@ const navigation = document.getElementById('navigation')
 
 onScroll()
 function onScroll() {
+  showNavOnScroll()
   showBackToTopButtonOnScroll()
+
+  activateMenuAtCurrentSection(home)
+  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(stores)
+  activateMenuAtCurrentSection(contactus)
+}
+
+function activateMenuAtCurrentSection(section) {
+  const targetLine = scrollY + innerHeight / 2
+
+  const sectionTop = section.offsetTop
+  const sectionHeight = section.offsetHeight
+  const sectionTopReachOrPassedTargetline = targetLine >= sectionTop
+
+  const sectionEndsAt = sectionTop + sectionHeight
+  const sectionEndPassedTargetline = sectionEndsAt <= targetLine
+
+  // limites da seção
+  const sectionBoundaries =
+    sectionTopReachOrPassedTargetline && !sectionEndPassedTargetline
+
+  const sectionId = section.getAttribute('id')
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+
+  menuElement.classList.remove('active')
+  if (sectionBoundaries) {
+    menuElement.classList.add('active')
+  }
 }
 
 function showNavOnScroll() {
@@ -33,4 +62,4 @@ function closeMenu() {
 new formsapp('634356b50161c14210d144f6', {
   width: '100%',
   height: 'formHeight'
-});
+})
