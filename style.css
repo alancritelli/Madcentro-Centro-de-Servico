@@ -48,17 +48,22 @@ img {
   background: var(--secundary-color);
   color: white;
 
-  border-radius: 2rem;
+  border: none;
+  border-radius: 1.4rem;
 
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-inline: auto;
+
+  padding: 1.6rem 3.2rem;
   width: 90%;
-  padding: 2rem;
 
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   transition: background 200ms;
 }
@@ -190,6 +195,10 @@ body.menu-expanded button {
 }
 
 /*===============HOME===============*/
+#home header p {
+  margin-bottom: 1.6rem;
+}
+
 #home img {
   width: 95%;
   margin-inline: auto;
@@ -197,10 +206,6 @@ body.menu-expanded button {
   border-radius: 0rem 10rem 0rem 10rem;
 
   filter: drop-shadow(1rem -1.5rem 1rem var(--primary-color));
-}
-
-#home header p {
-  margin-bottom: 1.6rem;
 }
 
 /*===============SERVICES===============*/
@@ -387,28 +392,25 @@ footer .social a:hover {
   section#home .wrapper {
     padding-top: 7rem;
     grid-template-columns: 1fr 1fr;
+    gap: 10rem;
   }
 
-  #home header {
-    text-align: center;
+  #home .wrapper a {
+    margin-top: -15rem;
+    height: fit-content;
   }
 
-  #home .button {
-    margin: 2rem;
-    margin-top: -6.7rem;
+  /*===============SERVICES===============*/
+  #services .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
   }
-}
 
-/*===============SERVICES===============*/
-#services .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-}
-
-/*===============STORES===============*/
-#stores .stores {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  /*===============STORES===============*/
+  #stores .stores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
 }
