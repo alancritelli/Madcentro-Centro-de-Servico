@@ -392,7 +392,11 @@ footer .social a:hover {
   section#home .wrapper {
     padding-top: 7rem;
     grid-template-columns: 1fr 1fr;
-    gap: 10rem;
+    gap: 5rem;
+  }
+
+  #home .content img {
+    width: 110%;
   }
 
   #home .wrapper a {
